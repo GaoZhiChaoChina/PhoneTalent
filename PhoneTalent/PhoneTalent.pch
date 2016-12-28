@@ -1,0 +1,43 @@
+//
+//  PhoneTalent.pch
+//  PhoneTalent
+//
+//  Created by cloud on 15/12/2.
+//  Copyright (c) 2015年 cloud. All rights reserved.
+//
+
+#ifndef PhoneTalent_PhoneTalent_pch
+#define PhoneTalent_PhoneTalent_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//#import <Foundation/Foundation.h>
+//#import "AFNetworking.h"
+//#import "UIKit+AFNetworking.h"
+//#import "UIScrollView+DataFetch.h"
+#import <UIKit/UIKit.h>
+#import "Common.h"
+#import "GZCUtility.h"
+#import "GZCUtility+View.h"
+//#import "LableView.h"
+//#import "Model.h"
+#import "AppDelegate.h"
+#import "UIView+Positioning.h"
+#import "NSString+StringUtility.h"
+#import "NSString+UtililySkills.h"
+#import "ImageView.h"
+#pragma Mark 三方库 begin
+#import "Masonry.h"
+#import "ZXWriter.h"
+#import <ZXingObjC.h>
+#import <AudioToolbox/AudioToolbox.h>
+#pragma Mark 三方库 end
+
+//#import "ButtonView.h"
+//#import "CustomView.h"
+//#import "PureLayout.h"
+//#import "UIView+Positioning.h"
+//#import"UserManager.h"
+//#import "NSMutableDictionaryCatalog.h"
+
+#endif

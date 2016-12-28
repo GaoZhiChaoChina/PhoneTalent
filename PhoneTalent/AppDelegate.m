@@ -2,11 +2,16 @@
 //  AppDelegate.m
 //  PhoneTalent
 //
-//  Created by gaozhichao on 2016/12/28.
-//  Copyright © 2016年 gaozhicao. All rights reserved.
+//  Created by gaozhichao on 2016/12/5.
+//  Copyright © 2016年 GZC. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "GZCHomeViewController.h"
+#import "GZCScanQRCodeSystemViewController.h"
+#import "GZCJZMerchantViewController.h"
+#import "GZCMineViewController.h"
+#import "CustomTabbarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    CustomTabbarController*custom=[[CustomTabbarController alloc] init];
+    self.window.rootViewController=custom;
+
     return YES;
 }
 

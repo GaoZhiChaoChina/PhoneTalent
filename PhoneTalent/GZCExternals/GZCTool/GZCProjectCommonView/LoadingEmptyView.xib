@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="X1q-Tx-vRe" userLabel="empty view" customClass="LoadingEmptyView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无内容" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-bk-aJ8">
+                    <rect key="frame" x="20" y="141" width="280" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="vC8-88-1sW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_pic6.png" translatesAutoresizingMaskIntoConstraints="NO" id="rjX-1H-8Bn">
+                    <rect key="frame" x="122" y="44" width="77" height="77"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rjX-1H-8Bn" firstAttribute="top" secondItem="X1q-Tx-vRe" secondAttribute="top" constant="44" id="Ah5-wZ-tfO"/>
+                <constraint firstAttribute="centerX" secondItem="qkw-bk-aJ8" secondAttribute="centerX" id="X7W-cp-fGn"/>
+                <constraint firstItem="qkw-bk-aJ8" firstAttribute="top" secondItem="rjX-1H-8Bn" secondAttribute="bottom" constant="20" id="ywB-dj-UrD"/>
+                <constraint firstAttribute="centerX" secondItem="rjX-1H-8Bn" secondAttribute="centerX" id="zse-f5-5ha"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="_imageView" destination="rjX-1H-8Bn" id="BQY-J6-alN"/>
+                <outlet property="_imageViewLayoutConstraint" destination="ywB-dj-UrD" id="2ud-Bk-JmU"/>
+                <outlet property="_label" destination="qkw-bk-aJ8" id="McN-M8-Lw6"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_pic6.png" width="77" height="77"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
