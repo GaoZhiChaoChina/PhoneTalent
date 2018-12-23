@@ -31,6 +31,7 @@
 }
 
 -(void)sendPuzzleGameViewController{
+    
     GZCPuzzleGameViewController *puzzleGame = [[GZCPuzzleGameViewController alloc]init];
     puzzleGame.numberX = 3;
     puzzleGame.numberY = 3;

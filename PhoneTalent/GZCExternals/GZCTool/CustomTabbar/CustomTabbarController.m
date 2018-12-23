@@ -27,21 +27,25 @@
     NSArray*VcArray=@[@"GZCHomeViewController",
                       @"GZCScanQRCodeSystemViewController",
                       @"GZCJZMerchantViewController",
+                      @"ToolController",
                       @"GZCMineViewController"];
     
     NSArray*VCTitles=@[@"欢乐购",
                        @"扫一扫",
                        @"娱乐",
+                       @"工具",
                        @"发现"];
     
-    NSArray*image=@[@"tabbar_home_os7",
+    NSArray *image=@[@"tabbar_home_os7",
                     @"tabbar_discover_os7",
+                    @"tabbar_message_center_os7",
                     @"tabbar_message_center_os7",
                     @"tabbar_profile_os7",];
     
     
     NSArray*selectImage=@[@"tabbar_home_selected_os7",
                           @"tabbar_discover_selected_os7",
+                          @"tabbar_message_center_selected_os7",
                           @"tabbar_message_center_selected_os7",
                           @"tabbar_profile_selected_os7",];
     

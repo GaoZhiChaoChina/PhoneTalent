@@ -12,6 +12,7 @@
 #import "GZCJZMerchantViewController.h"
 #import "GZCMineViewController.h"
 #import "CustomTabbarController.h"
+#import "ToolController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,54 @@
     // Override point for customization after application launch.
     CustomTabbarController*custom=[[CustomTabbarController alloc] init];
     self.window.rootViewController=custom;
+//    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+//    NSLog(@"===%@",[NSRunLoop currentRunLoop]);
 
+//
+//    dispatch_queue_t queue = dispatch_queue_create("gcdtest.rongfzh.yc", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_async(queue, ^{
+//        [NSThread sleepForTimeInterval:3];
+//        NSLog(@"dispatch_async1");
+//    });
+//    dispatch_async(queue, ^{
+//        [NSThread sleepForTimeInterval:1];
+//        NSLog(@"dispatch_async2");
+//    });
+//    dispatch_barrier_async(queue, ^{
+//        NSLog(@"dispatch_barrier_async");
+//        [NSThread sleepForTimeInterval:0.5];
+//
+//    });
+//    dispatch_async(queue, ^{
+//        [NSThread sleepForTimeInterval:1];
+//        NSLog(@"dispatch_async3");
+//    });
+//
+    
+    dispatch_queue_t queue1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue1, ^{
+        [NSThread sleepForTimeInterval:6];
+        NSLog(@"group1 [NSThread sleepForTimeInterval:6];");
+    });
+    dispatch_group_async(group, queue1, ^{
+        [NSThread sleepForTimeInterval:3];
+        NSLog(@"group2 [NSThread sleepForTimeInterval:3];");
+    });
+    dispatch_group_async(group, queue1, ^{
+        [NSThread sleepForTimeInterval:1];
+        NSLog(@"group3 [NSThread sleepForTimeInterval:1];");
+    });
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"main thread.");
+    });
+  
+    
+    dispatch_apply(5, queue1, ^(size_t index) {
+        NSLog(@"%ld",index);
+    });
+    
+    
     return YES;
 }
 

@@ -26,7 +26,7 @@
 
     _webView.scrollView.scrollEnabled = YES;
     _webView.scalesPageToFit = YES;
-    NSMutableURLRequest *requst=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://a.appshang.com/?appUrl=564ab11a26322"]];
+    NSMutableURLRequest *requst=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]];
     
     [requst setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     [_webView loadRequest:requst];

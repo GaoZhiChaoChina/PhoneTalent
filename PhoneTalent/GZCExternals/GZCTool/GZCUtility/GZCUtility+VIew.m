@@ -579,7 +579,6 @@
 static char UIViewParameterKey;
 
 -(void) setParame:(NSDictionary*) dic{
-    
     objc_setAssociatedObject(self, &UIViewParameterKey,dic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 -(NSDictionary*) parame{

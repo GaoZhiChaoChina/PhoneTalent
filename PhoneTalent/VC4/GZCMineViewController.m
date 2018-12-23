@@ -18,7 +18,11 @@
 @end
 
 @implementation GZCMineViewController
-    
+
++ (void)load{
+    NSLog(@"%s",__func__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [GZCUtility setClearColorTheme:self.navigationController];
